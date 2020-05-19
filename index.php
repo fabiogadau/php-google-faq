@@ -62,44 +62,41 @@
       <h1>
          <a href="https://www.google.com/">
             <img src="assets/img/google-logo.png" alt="google-logo">
-            <a href="https://policies.google.com/">Privacy e termini</a>
+            <a class="privacy" href="#">Privacy e termini</a>
          </a>
       </h1>
 
       <!-- Header Navbar -->
       <ul class="header-nav">
          <li>
-            <a href="https://policies.google.com/">Introduzione</a>
+            <a href="#">Introduzione</a>
          </li>
          <li>
-            <a href="https://policies.google.com/privacy">Norme sulla privacy</a>
+            <a href="#">Norme sulla privacy</a>
          </li>
          <li>
-            <a href="https://policies.google.com/terms">Termini di servizio</a>
+            <a href="#">Termini di servizio</a>
          </li>
          <li>
-            <a href="https://policies.google.com/technologies">Tecnologie</a>
+            <a href="#">Tecnologie</a>
          </li>
          <li>
-            <a href="https://policies.google.com/faq">Domande frequenti</a>
+            <a href="#">Domande frequenti</a>
          </li>
          <li>
-            <a href="https://myaccount.google.com/">Account Google</a>
+            <a href="#">Account Google</a>
          </li>
       </ul>
    </header>
    
    <!-- MAIN CONTENT -->
-   <main>
-      <!-- Faqs -->
-      <div class="faqs-container">
-         <?php foreach ( $faqs as $data ) { ?>
-            <div class="faq">
-            <?php echo $data['question'] ?>
-            <?php echo $data['answer'] ?>
-            </div>
-         <?php } ?>
-      </div>
+   <main class="faqs-container">
+      <?php foreach ( $faqs as $data ) { ?>
+         <section class="faq">
+         <?php echo $data['question'] ?>
+         <?php echo $data['answer'] ?>
+         </section>
+      <?php } ?>
    </main>
    
    <!-- FOOTER -->
