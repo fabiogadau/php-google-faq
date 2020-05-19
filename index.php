@@ -5,7 +5,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>PHP Google FAQ</title>
    <!-- Stylesheet -->
-   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
    <link rel="stylesheet" href="assets/styles/main.css">
 </head>
 <body>
@@ -56,14 +56,83 @@
       //var_dump($faqs);
    ?>
 
-   <ul>
-      <?php foreach ( $faqs as $data ) { ?>
+   <!-- HEADER -->
+   <header>
+      <!-- Title and Logo -->
+      <h1>
+         <a href="https://www.google.com/">
+            <img src="assets/img/google-logo.png" alt="google-logo">
+            <a href="https://policies.google.com/">Privacy e termini</a>
+         </a>
+      </h1>
+
+      <!-- Header Navbar -->
+      <ul class="header-nav">
          <li>
-         <?php echo $data['question'] ?>
-         <?php echo $data['answer'] ?>
+            <a href="https://policies.google.com/">Introduzione</a>
          </li>
-      <?php } ?>
-   </ul>
+         <li>
+            <a href="https://policies.google.com/privacy">Norme sulla privacy</a>
+         </li>
+         <li>
+            <a href="https://policies.google.com/terms">Termini di servizio</a>
+         </li>
+         <li>
+            <a href="https://policies.google.com/technologies">Tecnologie</a>
+         </li>
+         <li>
+            <a href="https://policies.google.com/faq">Domande frequenti</a>
+         </li>
+         <li>
+            <a href="https://myaccount.google.com/">Account Google</a>
+         </li>
+      </ul>
+   </header>
+   
+   <!-- MAIN CONTENT -->
+   <main>
+      <!-- Faqs -->
+      <div class="faqs-container">
+         <?php foreach ( $faqs as $data ) { ?>
+            <div class="faq">
+            <?php echo $data['question'] ?>
+            <?php echo $data['answer'] ?>
+            </div>
+         <?php } ?>
+      </div>
+   </main>
+   
+   <!-- FOOTER -->
+   <footer>
+      <ul class="footer-nav">
+         <li>
+            <a href="https://www.google.com/">Google</a>
+         </li>
+         <li>
+            <a href="https://about.google/">Tutto su Google</a>
+         </li>
+         <li>
+            <a href="https://policies.google.com/privacy">Privacy</a>
+         </li>
+         <li>
+            <a href="https://policies.google.com/terms">Termini</a>
+         </li>
+         <li>
+            <img src="assets/img/language.png" alt="change-language">
+            <select name="change-language" id="change-language">
+               <option value="it">Italiano</option>
+               <option value="en">Inglese</option>
+               <option value="fr">Francese</option>
+               <option value="es">Spagnolo</option>
+               <option value="de">Tedesco</option>
+               <option value="ja">Giapponese</option>
+               <option value="ru">Russo</option>
+               <option value="cn">Cinese</option>
+               <option value="ar">Arabo</option>
+            </select>
+         </li>
+      </ul>
+   </footer>
 
 </body>
 </html>
